@@ -1,0 +1,62 @@
+{% extends lang+"/public/base.html" %}
+
+{% block title %}Poslovni uporabniki{% endblock title %}
+
+{% block content %}
+<div class="jumbotron" style="background:url(/static/custom/svg/img11.jpeg); background-size: 100%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center" style="color: aqua">
+                <h1 class="display-3">+386 30 000 000</h1>
+                <br>
+                <h1 class="display-3">info@sportnevadbe.com</h1>
+            </div>
+         </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="inputName">Ime*</label>
+                            <input type="text" class="form-control" placeholder="Ime">
+                        </div>
+                        <div class="col">
+                            <label for="inputCompany">Podjetje</label>
+                            <input type="text" class="form-control" placeholder="Podjetje">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="inputEmail">Email*</label>
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="col">
+                            <label for="inputPhone">Telefon*</label>
+                            <input type="text" class="form-control" placeholder="Telefon">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Sporočilo*</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Pošlji</button>
+                </form>
+            </div>
+            <div class="col-md-6 text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.0222267155077!2d14.541794015397935!3d46.07059797911282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765325cff481ec9%3A0x381d836e07cb8b1f!2sKvedrova%20cesta%2C%201000%20Ljubljana!5e0!3m2!1sen!2ssi!4v1574693677021!5m2!1sen!2ssi" width="500" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

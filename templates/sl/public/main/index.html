@@ -1,0 +1,83 @@
+{% extends lang+"/public/base.html" %}
+
+{% block title %}Živjo{% endblock title %}
+
+{% block content %}
+<div class="jumbotron" style="background:url(/static/custom/svg/slika3.jpeg); background-size: 100%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Free illustration from UnDraw: https://undraw.co/illustrations -->
+                <img class="img-fluid" src="/static/custom/svg/slika1.jpeg" alt="Master Plan">
+            </div>
+
+            <div class="col-md-8 text-center" style="color: white">
+                <h1 class="display-3">Ena registracija, ena članarina</h1>
+
+                <p>Treniraj v več športnih centrov</p>
+                <p>
+                    Če želiš telovaditi več športov s eno mesečno članarino v več špornih centrov, potem si na pravoj spletnoj strani.
+                </p>
+
+                <p><a class="btn btn-primary btn-lg" href="{{ url_for('public.auth.login') }}" role="button">Prijavi se</a></p>
+
+                <p><a class="btn btn-primary btn-lg" href="{{ url_for('public.auth.login') }}" role="button">Ponudba za poslovne uporabnike</a></p>
+              </div>
+         </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Kako funkcionirajo športne vadbe</h2>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <h2>1</h2>
+            <p>
+                Prijavi se na spletno stran ......Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+                mollis euismod. Donec sed odio dui.
+            </p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h2>2</h2>
+            <p>
+                Kadarkoli želite .......Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+                mollis euismod. Donec sed odio dui.
+            </p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h2>3</h2>
+            <p>
+                Uporabi ŠV registracijo v izbranem ...egestas eget quam. Vestibulum id ligula
+                porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+                ut fermentum massa justo sit amet risus.
+            </p>
+        </div>
+    </div>
+</div> <!-- /container -->
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Želiš postati naš partner</h2>
+            </div>
+            <div class="col-md-12 text-center">
+                <p>
+                Uporabi ŠV registracijo v izbranem ...Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+                porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+                ut fermentum massa justo sit amet risus.
+                </p>
+                <p><a class="btn btn-primary btn-lg" href="{{ url_for('public.auth.login') }}" role="button">Registrirajte svoj center</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

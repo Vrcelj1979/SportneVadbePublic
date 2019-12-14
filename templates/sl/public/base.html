@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+    <!-- Required Bootstrap meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <title>{% block title %}{% endblock title %} | Športne vadbe</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/custom/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{ url_for('public.main.index') }}">Športne vadbe - logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="{{ url_for('public.main.index') }}">Začetna</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="{{ url_for('public.business_users.index') }}">Poslovni uporabniki</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="{{ url_for('public.sports_providers.index') }}">Športni ponudniki</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="{{ url_for('public.contact.index') }}">Kontakt</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{lang}}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownLang">
+                    <a class="dropdown-item" onclick="selectLang('en')" href="#">English</a>
+                    <a class="dropdown-item" onclick="selectLang('sl')" href="#">Slovenščina</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('public.auth.login') }}">Prijava</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('public.auth.register') }}">Registracija</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<main role="main" class="container pt-4 pb-2">
+    {% block content %}
+    {% endblock content %}
+</main>
+
+<hr>
+
+<footer class="container text-center">
+    <div class="row">
+        <div class="col-md-4 text-left">
+            <table style="width:100%">
+                <tr>
+                    <td>Podatki o podjetju:</td>
+                </tr>
+                <tr>
+                    <td>Naziv:</td>
+                </tr>
+                <tr>
+                    <td>Naslov:</td>
+                </tr>
+                <tr>
+                    <td>DDV ID:</td>
+                </tr>
+                <tr>
+                    <td>Matična številka:</td>
+                </tr>
+            </table>
+            <div>
+                <a class="btn btn-social-icon btn-twitter">
+                    <span class="fa fa-twitter"></span>
+                </a>
+                <a class="btn btn-social-icon btn-facebook">
+                    <span class="fa fa-facebook"></span>
+                </a>
+                <a class="btn btn-social-icon btn-linkedin">
+                    <span class="fa fa-linkedin"></span>
+                </a>
+                <a class="btn btn-social-icon btn-youtube">
+                    <span class="fa fa-youtube"></span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <p>Športne vadbe &copy; {{ now.year }}</p>
+        </div>
+          <div class="col-md-4 text-right">
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <a class="navbar-link" href="{{ url_for('public.main.index') }}">Športni ponudniki</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="navbar-link" href="{{ url_for('public.main.index') }}">Poslovni uporabniki</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="navbar-link" href="{{ url_for('public.main.index') }}">Kontakt</a>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                      <a class="navbar-link" href="{{ url_for('public.auth.login') }}">Prijava</a>
+                    </td>
+                </tr>
+            </table>
+          </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/static/custom/js/scripts.js"></script>
+
+{% block scripts %}
+{% endblock scripts %}
+</body>
+</html>

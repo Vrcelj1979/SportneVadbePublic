@@ -1,0 +1,81 @@
+{% extends lang+"/public/base.html" %}
+
+{% block title %}Športni ponudniki{% endblock title %}
+
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1415347.4308080152!2d13.871918091804222!3d46.143767217265584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476524e75e968361%3A0xe740451e25e2d465!2sSlovenia!5e0!3m2!1sen!2ssi!4v1574679499268!5m2!1sen!2ssi" width="1200" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+         </div>
+    </div>
+</div>
+
+<div class="jumbotron" style="background:url(/static/custom/svg/img5.jpeg); background-size: 100%;" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form method="post">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="scInput" placeholder="Športni center" name="find-sc" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Poišči športni center</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Zakaj športne vadbe</h2>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6 text-center">
+         <img class="img-fluid" src="/static/custom/svg/img6.jpeg" alt="Master Plan">
+      </div>
+      <div class="col-md-6 text-center">
+        <p>
+           Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+           mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+           mollis euismod. Donec sed odio dui.
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <p>
+           Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+           mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+           mollis euismod. Donec sed odio dui.
+        </p>
+      </div>
+      <div class="col-md-6 text-center">
+         <img class="img-fluid" src="/static/custom/svg/img7.jpeg" alt="Master Plan">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-6 text-center">
+         <img class="img-fluid" src="/static/custom/svg/img9.jpeg" alt="Master Plan">
+      </div>
+      <div class="col-md-6 text-center">
+        <p>
+           Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+           mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+           mollis euismod. Donec sed odio dui.
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="col-md-12 text-center">
+      <p><a class="btn btn-primary btn-lg" href="{{ url_for('public.auth.login') }}" role="button">Postanite naš uporabnik</a></p>
+    </div>
+</div> <!-- /container -->
+
+{% endblock content %}
